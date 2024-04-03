@@ -11,7 +11,7 @@ import javax.servlet.annotation.HttpConstraint;
 
 @Entity
 @Table(name = "cab")
-@Getter
+//@Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,11 +23,23 @@ public class Cab{
     private double perKmRate;
     private boolean available;
 
+    public Integer getId() {
+        return Id;
+    }
 
-//    @JoinColumn
-//    @OneToOne
-//    private Driver driver;
-@OneToOne
+    public double getPerKmRate() {
+        return perKmRate;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    @OneToOne
 @JoinColumn(name = "driverId")
 private Driver driver;
 }
