@@ -18,7 +18,7 @@ public class TripBooking{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer tripBookingId;
-    private String fromlocation;
+    private String fromLocation;
     private int distanceInKm;
     private String toLocation;
     private TripStatus status;
@@ -32,7 +32,7 @@ public class TripBooking{
 
 
     public TripBooking(String fromLocation, String toLocation, int distanceInKm) {
-        this.fromlocation = fromLocation;
+        this.fromLocation = fromLocation;
         this.toLocation = toLocation;
         this.distanceInKm = distanceInKm;
     }

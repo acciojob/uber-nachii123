@@ -26,7 +26,7 @@ public class CustomerController {
 
 	@PostMapping("/bookTrip")
 	public void bookTrip(@RequestParam Integer customerId, @RequestParam String fromLocation, @RequestParam String toLocation, @RequestParam int distanceInKm) throws Exception {
-		customerService.bookedTrip(customerId,fromLocation,toLocation,distanceInKm);
+		customerService.bookTrip(customerId,fromLocation,toLocation,distanceInKm);
 	}
 
 	@DeleteMapping("/complete")
