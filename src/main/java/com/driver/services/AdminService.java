@@ -10,9 +10,9 @@ public interface AdminService {
 
 	public void adminRegister(Admin admin);
 
-	public Admin updatePassword(Long adminId, String password);
+	public Admin updatePassword(Integer adminId, String password);
 
-	public void deleteAdmin(Long adminId);
+	public void deleteAdmin(Integer adminId);
 
 	public List<Driver> getListOfDrivers();
 	

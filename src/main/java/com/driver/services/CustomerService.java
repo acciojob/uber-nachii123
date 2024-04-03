@@ -12,16 +12,16 @@ public interface CustomerService {
 
 	public void register(Customer customer);
 
-	public void deleteCustomer(Long customerId);
+	public void deleteCustomer(Integer customerId);
 	
 	// public TripBooking bookedTrip(int customerId, String fromLocation, String toLocation, int distanceInKm) throws Exception;
 
 //	void deleteCustomer(Long customerId);
 
-	TripBooking bookedTrip(Long customerId, String fromLocation, String toLocation, double distanceInKm) throws Exception;
+	TripBooking bookedTrip(Integer customerId, String fromLocation, String toLocation, int distanceInKm) throws Exception;
 
-    public void cancelTrip(Long tripId);
+    public void cancelTrip(Integer tripId);
 
-	public void completeTrip(Long tripId);
+	public void completeTrip(Integer tripId);
 	
 }

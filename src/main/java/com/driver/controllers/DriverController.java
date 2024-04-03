@@ -22,13 +22,13 @@ public class DriverController {
 	}
 	
 	@DeleteMapping(value = "/delete")
-	public void deleteDriver(@RequestParam Long driverId){
+	public void deleteDriver(@RequestParam Integer driverId){
 		driverService.removeDriver(driverId);
 
 	}
 
 	@PutMapping("/status")
-	public void updateStatus(@RequestParam Long driverId){
+	public void updateStatus(@RequestParam Integer driverId){
 		driverService.updateStatus(driverId);
 	}
 }

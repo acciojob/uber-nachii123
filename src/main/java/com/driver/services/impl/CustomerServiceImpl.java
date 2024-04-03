@@ -32,7 +32,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 
 	@Override
-	public void deleteCustomer(Long customerId) {
+	public void deleteCustomer(Integer customerId) {
 		// Delete customer without using deleteById function
 		Optional<Customer> customer = customerRepository2.findById(customerId);
 		if(customer.isPresent()){
@@ -48,7 +48,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 
 	@Override
-	public TripBooking bookedTrip(Long customerId, String fromLocation, String toLocation, double distanceInKm) throws Exception {
+	public TripBooking bookedTrip(Integer customerId, String fromLocation, String toLocation, int distanceInKm) throws Exception {
 		//Book the driver with lowest driverId who is free (cab available variable is Boolean.TRUE). If no driver is available, throw "No cab available!" exception
 		//Avoid using SQL query
 		List<Driver> availableDrivers = driverRepository2.findByAvailableTrueOrderByDriverIdAsc();
@@ -73,7 +73,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public void cancelTrip(Long tripId){
+	public void cancelTrip(Integer tripId){
 		//Cancel the trip having given trip Id and update TripBooking attributes accordingly
 		Optional<TripBooking> booking = tripBookingRepository2.findById(tripId);
 		if(booking.isPresent()){
@@ -86,7 +86,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public void completeTrip(Long tripId){
+	public void completeTrip(Integer tripId){
 		//Complete the trip having given trip Id and update TripBooking attributes accordingly
 		Optional<TripBooking> tripBooking = tripBookingRepository2.findById(tripId);
 		TripBooking tripBooking1 = tripBooking.get();

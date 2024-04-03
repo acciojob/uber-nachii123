@@ -38,7 +38,7 @@ public class DriverServiceImpl implements DriverService {
 	}
 
 	@Override
-	public void removeDriver(Long driverId){
+	public void removeDriver(Integer driverId){
 		// Delete driver without using deleteById function
 		Optional<Driver> driver = driverRepository3.findById(driverId);
 		if(driver.isPresent()){
@@ -48,7 +48,7 @@ public class DriverServiceImpl implements DriverService {
 	}
 
 	@Override
-	public void updateStatus(Long driverId){
+	public void updateStatus(Integer driverId){
 		//Set the status of respective car to unavailable
 		// Find the cab associated with the driver ID
 		Optional<Driver> optionalDriver = driverRepository3.findById(driverId);
