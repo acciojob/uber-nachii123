@@ -33,7 +33,7 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	public Admin updatePassword(Integer adminId, String password) {
+	public Admin updatePassword(Long adminId, String password) {
 		//Update the password of admin with given id
 		Optional<Admin> optionalAdmin = adminRepository1.findById(adminId);
 		if (optionalAdmin.isPresent()) {
@@ -47,7 +47,7 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	public void deleteAdmin(int adminId){
+	public void deleteAdmin(Long adminId){
 		// Delete admin without using deleteById function
 		Optional<Admin> admin = adminRepository1.findById(adminId);
 		if(admin.isPresent()){

@@ -18,7 +18,7 @@ import java.util.List;
 public class Driver{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer driverId;
+    private Long driverId;
 
     private String name;
     private boolean available;

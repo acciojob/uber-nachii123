@@ -25,17 +25,17 @@ public class CustomerController {
 	}
 
 	@PostMapping("/bookTrip")
-	public void bookTrip(@RequestParam Integer customerId, @RequestParam String fromLocation, @RequestParam String toLocation, @RequestParam Integer distanceInKm) throws Exception {
+	public void bookTrip(@RequestParam Long customerId, @RequestParam String fromLocation, @RequestParam String toLocation, @RequestParam double distanceInKm) throws Exception {
 		customerService.bookedTrip(customerId,fromLocation,toLocation,distanceInKm);
 	}
 
 	@DeleteMapping("/complete")
-	public void completeTrip(@RequestParam Integer tripId){
+	public void completeTrip(@RequestParam Long tripId){
 		customerService.completeTrip(tripId);
 	}
 
 	@DeleteMapping("/cancelTrip")
-	public void cancelTrip(@RequestParam Integer tripId){
+	public void cancelTrip(@RequestParam Long tripId){
 		customerService.cancelTrip(tripId);
 	}
 }
