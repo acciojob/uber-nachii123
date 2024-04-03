@@ -31,7 +31,7 @@ public class TripBooking{
     private Driver driver;
 
 
-    public TripBooking(String fromLocation, String toLocation, int distanceInKm) {
+    public TripBooking(String fromLocation, String toLocation, double distanceInKm) {
         this.fromlocation = fromLocation;
         this.toLocation = toLocation;
         this.distance = distanceInKm;

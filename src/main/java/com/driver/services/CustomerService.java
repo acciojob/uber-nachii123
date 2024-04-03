@@ -14,9 +14,11 @@ public interface CustomerService {
 
 	public void deleteCustomer(Integer customerId);
 	
-	public TripBooking bookedTrip(int customerId, String fromLocation, String toLocation, int distanceInKm) throws Exception;
-	
-	public void cancelTrip(Integer tripId);
+	// public TripBooking bookedTrip(int customerId, String fromLocation, String toLocation, int distanceInKm) throws Exception;
+
+    TripBooking bookedTrip(int customerId, String fromLocation, String toLocation, double distanceInKm) throws Exception;
+
+    public void cancelTrip(Integer tripId);
 
 	public void completeTrip(Integer tripId);
 	

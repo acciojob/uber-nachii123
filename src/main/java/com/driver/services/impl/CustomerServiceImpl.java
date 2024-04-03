@@ -9,7 +9,6 @@ import com.driver.repository.CustomerRepository;
 import com.driver.repository.DriverRepository;
 import com.driver.repository.TripBookingRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,9 +40,14 @@ public class CustomerServiceImpl implements CustomerService {
 
 	}
 
+//	@Override
+//	public TripBooking bookedTrip(int customerId, String fromLocation, String toLocation, int distanceInKm) throws Exception {
+//		return null;
+//	}
+
 
 	@Override
-	public TripBooking bookedTrip(int customerId, String fromLocation, String toLocation, int distanceInKm) throws Exception {
+	public TripBooking bookedTrip(int customerId, String fromLocation, String toLocation, double distanceInKm) throws Exception {
 		//Book the driver with lowest driverId who is free (cab available variable is Boolean.TRUE). If no driver is available, throw "No cab available!" exception
 		//Avoid using SQL query
 		List<Driver> availableDrivers = driverRepository2.findByAvailableTrueOrderByDriverIdAsc();
