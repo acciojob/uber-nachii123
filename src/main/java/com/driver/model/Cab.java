@@ -19,7 +19,7 @@ public class Cab{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer cabId;
+    private Integer cab_id;
     private double perKmRate;
     private boolean available;
 

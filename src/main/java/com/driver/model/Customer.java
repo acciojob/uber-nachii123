@@ -19,7 +19,7 @@ public class Customer{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer customerId;
    private String mobile;
    private String password;
 //    private String username;
